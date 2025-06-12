@@ -1,0 +1,26 @@
+h1{
+    color:rgb(236, 68, 127);
+    border-bottom:dashed 2px rgba(175, 231, 234, 0.768);
+    font-family: "Gill Sans", sans-serif;
+}
+h2{
+    color:rgb(225, 150, 193);
+    background: linear-gradient(to right, #a3d0d8, #ffffff );
+}
+h3{
+    color: #651933;
+}
+
+.box15 {
+    padding: 0.2em 0.5em;
+    margin: 2em 0;
+    color: #565656;
+    background: #ffeaea;
+    box-shadow: 0px 0px 0px 10px #ffeaea;
+    border: dashed 2px #ffc3c3;
+    border-radius: 8px;
+}
+.box15 p {
+    margin: 0; 
+    padding: 0;
+}
