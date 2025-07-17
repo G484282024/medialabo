@@ -82,18 +82,38 @@ for (let info of infoList) {
 }
 
 // 課題6-1 のイベントハンドラ登録処理は以下に記述
+let b = document.querySelector('#sendRequest');
+b.addEventListener('click', sendRequest);
 
 
 
 
 // 課題6-1 のイベントハンドラ sendRequest() の定義
 function sendRequest() {
+let url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/{id}.json';
+
+    // 通信開始
+    axios.get(url)
+        .then(showResult)   // 通信成功
+        .catch(showError)   // 通信失敗
+        .then(finish);      // 通信の最後の処理
 
 }
 
 // 課題6-1: 通信が成功した時の処理は以下に記述
 function showResult(resp) {
+let data = resp.data;
 
+    // data が文字列型なら，オブジェクトに変換する
+    if (typeof data === 'string') {
+        data = JSON.parse(data);
+    }
+
+    // data をコンソールに出力
+    console.log(data);
+
+    // data.x を出力
+    console.log(data.x);
 }
 
 // 課題6-1: 通信エラーが発生した時の処理
