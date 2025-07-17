@@ -90,12 +90,7 @@ let da=[
 let b = document.querySelector('#sendRequest');
 b.addEventListener('click', sendRequest);
 
-
-
-
-// 課題6-1 のイベントハンドラ sendRequest() の定義
-function sendRequest() {
-  let To={360630:'Cairo カイロ （エジプト)',
+let To={360630:'Cairo カイロ （エジプト)',
 524901:' Moscow モスクワ （ロシア）',
 993800 :'Johannesburg ヨハネスブルク （南アフリカ）',
 1816670:  'Beijing 北京 （中華人民共和国）',
@@ -109,6 +104,11 @@ function sendRequest() {
 5368361 : 'Los Angeles ロサンゼルス （アメリカ合衆国）'}
 let uTo = "https://www.nishita-lab.org/web-contents/jsons/openweather/"
 
+
+
+// 課題6-1 のイベントハンドラ sendRequest() の定義
+function sendRequest() {
+  
     // 通信開始
     axios.get(url)
         .then(showResult)   // 通信成功
