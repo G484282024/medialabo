@@ -1,7 +1,7 @@
 
 // 課題3-2 のプログラムはこの関数の中に記述すること
 function print(data) {
-console.log("都市名:"+data.name);
+  console.log("都市名:"+data.name);
 console.log("天気:"+data.description);
 console.log("経度:"+data.coord.lon);
 console.log("緯度:"+data.coord.lat);
@@ -12,8 +12,72 @@ console.log("風速:"+data.wind.speed);
 console.log("風向:"+data.wind.deg);
 }
 
+//課題４
+// 都市名と都市IDのマッピング（辞書）
+const cityMap = {
+  "カイロ": "360630",
+  "モスクワ": "524901",
+  "ヨハネスブルク": "993800",
+  "北京": "1816670",
+  "東京": "1850147",
+  "シンガポール": "1880252",
+  "シドニー": "2147714",
+  "ロンドン": "2643743",
+  "パリ": "2968815",
+  "リオデジャネイロ": "3451189",
+  "ニューヨーク": "5128581",
+  "ロサンゼルス": "5368361"
+};
+
+document.getElementById("searchBtn").addEventListener("click", function (){
+  const inputName = document.getElementById("cityId").value.trim();
+  const cityId = cityMap[inputName];
+  const output = document.getElementById("output");
+
+  if (cityId) {
+    console.log("都市のID:"+cityId+"です");
+  } else {
+    console.log("入力された都市名に対応する都市IDはありません");
+  }
+})
+
+
+
+/*
+360630 ... Cairo カイロ （エジプト）
+524901 ... Moscow モスクワ （ロシア）
+993800 ... Johannesburg ヨハネスブルク （南アフリカ）
+1816670 ... Beijing 北京 （中華人民共和国）
+1850147 ... Tokyo 東京 （日本）
+1880252 ... Singapore シンガポール
+2147714 ... Sydney シドニー （オーストラリア）
+2643743 ... London ロンドン （イギリス）
+2968815 ... Paris パリ （フランス）
+3451189 ... Rio de Janeiro リオデジャネイロ （ブラジル）
+5128581 ... New York ニューヨーク （アメリカ合衆国）
+5368361 ... Los Angeles ロサンゼルス （アメリカ合衆国）
+*/
 // 課題5-1 の関数 printDom() はここに記述すること
 function printDom(data) {
+let resultDiv = document.createElement("div");
+  resultDiv.id = "result";
+  document.body.appendChild(resultDiv);
+let infoList = [
+"都市名:"+data.name,
+"天気:"+data.description,
+"経度:"+data.coord.lon,
+"緯度:"+data.coord.lat,
+"最高気温:"+data.main.temp_max,
+"最低気温:"+data.main.temp_min,
+"温度:"+data.main.humidity,
+"風速:"+data.wind.speed,
+"風向:"+data.wind.deg
+];
+for (let info of infoList) {
+    const p = document.createElement("p");
+    p.textContent = info;
+    resultDiv.appendChild(p);
+  }
 
 }
 
