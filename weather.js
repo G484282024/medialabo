@@ -59,25 +59,30 @@ document.getElementById("searchBtn").addEventListener("click", function (){
 */
 // 課題5-1 の関数 printDom() はここに記述すること
 function printDom(data) {
-let resultDiv = document.createElement("div");
-  resultDiv.id = "result";
-  document.body.appendChild(resultDiv);
-let infoList = [
-"都市名:"+data.name,
-"天気:"+data.description,
-"経度:"+data.coord.lon,
-"緯度:"+data.coord.lat,
-"最高気温:"+data.main.temp_max,
-"最低気温:"+data.main.temp_min,
-"温度:"+data.main.humidity,
-"風速:"+data.wind.speed,
-"風向:"+data.wind.deg
-];
-for (let info of infoList) {
-    const p = document.createElement("p");
-    p.textContent = info;
-    resultDiv.appendChild(p);
-  }
+let da=[
+        {a:'都市名'+data.name},
+        {a:'経度'+(data.coord.lon)},
+        {a:'緯度'+data.coord.lat},
+        {a:'天気'+data.weather[0].description},
+         {a:'最高気温'+data.main.temp_max},
+        {a:'最低気温'+data.main.temp_min},
+        {a:'湿度'+data.main.humidity},
+        {a:'風速'+data.wind.speed},
+        {a:'風向'+data.wind.deg},
+      ];
+
+    let di=document.querySelector('div#result'); 
+    let une=document.createElement('ul');
+    une.id='box';
+    une.setAttribute('id','box');
+    di.insertAdjacentElement('afterend',u); 
+     
+
+    for(let aun of da){
+      let l=document.createElement('li');
+      l.textContent = aun.a;                 
+      une.insertAdjacentElement('beforeend', l); 
+    }
 
 }
 
