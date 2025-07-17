@@ -128,7 +128,14 @@ let data = resp.data;
     }
 
     // data をコンソールに出力
-    console.log(data);
+  
+    console.log(data); 
+
+  console.log("都市名: " + data.name);  
+    console.log("天気: " + data.weather[0].description);  
+    console.log("気温: " + data.main.temp + " ℃");  
+    console.log("湿度: " + data.main.humidity + " %");  
+    console.log("風速: " + data.wind.speed + " m/s");  // 
 
     // data.x を出力
     console.log(data.x);
