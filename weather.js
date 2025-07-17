@@ -95,18 +95,19 @@ b.addEventListener('click', sendRequest);
 
 // 課題6-1 のイベントハンドラ sendRequest() の定義
 function sendRequest() {
-let uTo = "https://www.nishita-lab.org/web-contents/jsons/openweather/1850147.json";
-let uka = "https://www.nishita-lab.org/web-contents/jsons/openweather/360630.json";
-let uyo = "https://www.nishita-lab.org/web-contents/jsons/openweather/993800 .json";
-let umo = "https://www.nishita-lab.org/web-contents/jsons/openweather/524901.json";
-let upe = "https://www.nishita-lab.org/web-contents/jsons/openweather/1816670.json";
-let usi = "https://www.nishita-lab.org/web-contents/jsons/openweather/1880252.json";
-let usy = "https://www.nishita-lab.org/web-contents/jsons/openweather/2147714.json";
-let ulo = "https://www.nishita-lab.org/web-contents/jsons/openweather/2643743.json";
-let upa = "https://www.nishita-lab.org/web-contents/jsons/openweather/2968815.json";
-let uri = "https://www.nishita-lab.org/web-contents/jsons/openweather/3451189.json";
-let une = "https://www.nishita-lab.org/web-contents/jsons/openweather/5128581.json";
-let uam = "https://www.nishita-lab.org/web-contents/jsons/openweather/5368361.json";
+  let To={360630:'Cairo カイロ （エジプト)',
+524901:' Moscow モスクワ （ロシア）',
+993800 :'Johannesburg ヨハネスブルク （南アフリカ）',
+1816670:  'Beijing 北京 （中華人民共和国）',
+1850147 : 'Tokyo 東京 （日本）',
+1880252 : 'Singapore シンガポール',
+2147714 : 'Sydney シドニー （オーストラリア）',
+2643743 : 'London ロンドン （イギリス）',
+2968815 : 'Paris パリ （フランス）',
+3451189 : 'Rio de Janeiro リオデジャネイロ （ブラジル）',
+5128581 : 'New York ニューヨーク （アメリカ合衆国）',
+5368361 : 'Los Angeles ロサンゼルス （アメリカ合衆国）'}
+let uTo = "https://www.nishita-lab.org/web-contents/jsons/openweather/"
 
     // 通信開始
     axios.get(url)
@@ -146,7 +147,7 @@ function finish() {
 // 以下はグルメのデータサンプル
 // 注意: 第5回までは以下を変更しないこと！
 // 注意2: 課題6-1 で以下をすべて削除すること
-let data = {
+/*let data = {
   "coord": {
     "lon": 116.3972,
     "lat": 39.9075
@@ -192,4 +193,4 @@ let data = {
   "name": "北京市",
   "cod": 200
 };
-
+*/
