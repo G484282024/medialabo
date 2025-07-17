@@ -108,7 +108,7 @@ let To={360630:'Cairo カイロ （エジプト)',
 
 // 課題6-1 のイベントハンドラ sendRequest() の定義
 function sendRequest() {
-  let uTo = "https://www.nishita-lab.org/web-contents/jsons/openweather/"
+  let url = "https://www.nishita-lab.org/web-contents/jsons/openweather/"
   
     // 通信開始
     axios.get(url)
@@ -132,13 +132,16 @@ let data = resp.data;
     console.log(data); 
 
   console.log("都市名: " + data.name);  
-    console.log("天気: " + data.weather[0].description);  
-    console.log("気温: " + data.main.temp + " ℃");  
+  console.log ('経度'+(data.coord.lon));
+       console.log ('緯度'+data.coord.lat);
+    console.log("天気: " + data.weather[0].description);   
+     console.log ('最高気温'+data.main.temp_max);
+        console.log('最低気温'+data.main.temp_min);
     console.log("湿度: " + data.main.humidity + " %");  
-    console.log("風速: " + data.wind.speed + " m/s");  // 
+    console.log("風速: " + data.wind.speed + " m/s"); 
+        console.log('風向'+data.wind.deg);
 
-    // data.x を出力
-    console.log(data.x);
+   
 }
 
 // 課題6-1: 通信エラーが発生した時の処理
