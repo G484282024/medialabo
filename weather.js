@@ -87,7 +87,7 @@ let da=[
 }
 
 // 課題6-1 のイベントハンドラ登録処理は以下に記述
-let b = document.querySelector('#sendRequest');
+let b = document.querySelector('#searchBtn');
 b.addEventListener('click', sendRequest);
 
 let To={360630:'Cairo カイロ （エジプト)',
