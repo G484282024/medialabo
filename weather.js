@@ -95,7 +95,18 @@ b.addEventListener('click', sendRequest);
 
 // 課題6-1 のイベントハンドラ sendRequest() の定義
 function sendRequest() {
-let url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/{id}.json';
+let uTo = "https://www.nishita-lab.org/web-contents/jsons/openweather/1850147.json";
+let uka = "https://www.nishita-lab.org/web-contents/jsons/openweather/360630.json";
+let uyo = "https://www.nishita-lab.org/web-contents/jsons/openweather/993800 .json";
+let umo = "https://www.nishita-lab.org/web-contents/jsons/openweather/524901.json";
+let upe = "https://www.nishita-lab.org/web-contents/jsons/openweather/1816670.json";
+let usi = "https://www.nishita-lab.org/web-contents/jsons/openweather/1880252.json";
+let usy = "https://www.nishita-lab.org/web-contents/jsons/openweather/2147714.json";
+let ulo = "https://www.nishita-lab.org/web-contents/jsons/openweather/2643743.json";
+let upa = "https://www.nishita-lab.org/web-contents/jsons/openweather/2968815.json";
+let uri = "https://www.nishita-lab.org/web-contents/jsons/openweather/3451189.json";
+let une = "https://www.nishita-lab.org/web-contents/jsons/openweather/5128581.json";
+let uam = "https://www.nishita-lab.org/web-contents/jsons/openweather/5368361.json";
 
     // 通信開始
     axios.get(url)
