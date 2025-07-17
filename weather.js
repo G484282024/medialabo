@@ -102,12 +102,13 @@ let To={360630:'Cairo カイロ （エジプト)',
 3451189 : 'Rio de Janeiro リオデジャネイロ （ブラジル）',
 5128581 : 'New York ニューヨーク （アメリカ合衆国）',
 5368361 : 'Los Angeles ロサンゼルス （アメリカ合衆国）'}
-let uTo = "https://www.nishita-lab.org/web-contents/jsons/openweather/"
+
 
 
 
 // 課題6-1 のイベントハンドラ sendRequest() の定義
 function sendRequest() {
+  let uTo = "https://www.nishita-lab.org/web-contents/jsons/openweather/"
   
     // 通信開始
     axios.get(url)
