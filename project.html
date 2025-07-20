@@ -3,12 +3,15 @@
 <head>
   <meta charset="utf-8">
   <title>天気予報プロジェクト</title>
-   <script src="https://www.nishita-lab.org/web-contents/jsons/openweather/{id}.json"></script>
+  <link rel="stylesheet" href="project.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
   <script src="weather.js" defer></script>
 </head>
 <body>
   <h1>世界の天気</h1>
-  <p>どこの天気を知りたい？<input type="text" id="cityId" size="8" placeholder="都市IDを入力">
+  <p>どこの天気を知りたい？<input type="text" id="cityId" size="8" placeholder="都市名を入力">
 <button id="searchBtn">検索</button></p>
+
+<div  id="result"></div>
 </body>
 </html>
